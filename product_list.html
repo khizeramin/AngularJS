@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Git">
   <head>
     <meta charset="utf-8">
     <title>Git test</title>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
-    <div>
-      Hello man... Testing git here.
+    <div ng-controller="gitController">
+      Hello man... Testing git here. <br>
+      <button ng-click="checkingWatcher()">watchers ?</button> <br>
+      <input type="text" ng-model="prodList[0]"><br>
+      <button ng-click="checkingWatcher()">watchers ?</button>
+      <ol>
+        <li ng-repeat="item in prodList">{{item}}</li>
+      </ol>
+      <ol>
+        <li ng-repeat="item in filteredProdList">{{item}}</li>
+      </ol>
+      <button ng-click="checkingWatcher()">watchers ?</button>
     </div>
   </body>
 </html>
